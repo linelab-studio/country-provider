@@ -5,7 +5,7 @@ namespace LabStudio\GeoPolitic;
 
 
 use LabStudio\GeoPolitic\Exception\CountryProviderException;
-use Laminas\Hydrator\ClassMethodsHydrator;
+use Laminas\Hydrator\ClassMethods;
 
 class CountryProvider
 {
@@ -96,12 +96,12 @@ class CountryProvider
 
 
     /**
-     * @return ClassMethodsHydrator
+     * @return ClassMethods
      */
     protected function getHydrator()
     {
         if ($this->hydrator === null) {
-            $this->hydrator = new ClassMethodsHydrator();
+            $this->hydrator = new ClassMethods();
         }
         return $this->hydrator;
     }
@@ -113,11 +113,13 @@ class CountryProvider
     protected function getInventory()
     {
         if (self::$inventory === null) {
+
             $data = include __DIR__ . '/Data/countriesISO3166.config.php';
             self::$inventory = [];
-            foreach ($data as $item) {
-                if (!empty($item['alpha3'])) {
 
+            foreach ($data as $item) {
+
+                if (!empty($item['alpha3'])) {
                     $alpha3 = $item['alpha3'];
                     $alpha2 = (!empty($item['alpha2'])) ? $item['alpha2'] : null;
                     $name = (!empty($item['name'])) ? $item['name'] : null;
@@ -136,10 +138,8 @@ class CountryProvider
                     if($numeric) {
                         self::$getHelperNameToLatin3[$numeric] = $alpha3;
                     }
-
                 }
             }
-
         }
         return self::$inventory;
     }
