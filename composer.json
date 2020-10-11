@@ -1,7 +1,7 @@
 {
   "name": "linelab-studio/country-provider",
-  "description": "Udostępnia obiekt country na podstawie kodu iso lub nagłówka locale.",
-  "version": "0.0.2",
+  "description": "Udostępnia obiekt country na podstawie kodu iso lub nagłówka locale. ZF2",
+  "version": "2.0.1",
   "type": "library",
   "license": "Apache-2.0",
   "keywords": [
@@ -18,7 +18,7 @@
   ],
   "require": {
     "php": ">=5.5",
-    "laminas/laminas-hydrator": "^2.0.0"
+    "zendframework/zend-hydrator": "2.*"
   },
   "autoload": {
     "psr-0": { "LabStudio\\" : "src/" }
