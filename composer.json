@@ -1,7 +1,7 @@
 {
   "name": "linelab-studio/country-provider",
   "description": "Udostępnia obiekt country na podstawie kodu iso lub nagłówka locale. ZF2",
-  "version": "2.0.4",
+  "version": "2.0.3",
   "type": "library",
   "license": "Apache-2.0",
   "keywords": [
