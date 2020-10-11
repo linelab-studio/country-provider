@@ -1,0 +1,26 @@
+{
+  "name": "linelab-studio/country-provider",
+  "description": "Udostępnia obiekt country na podstawie kodu iso lub nagłówka locale.",
+  "version": "0.0.1",
+  "type": "library",
+  "license": "Apache-2.0",
+  "keywords": [
+    "php",
+    "country",
+    "locale privider",
+    "country privider"
+  ],
+  "authors": [
+    {
+      "name": "LineLab Studio",
+      "email" : "studio@linelab.pl"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "laminas/laminas-hydrator": "^3.1"
+  },
+  "autoload": {
+    "psr-0": { "LabStudio\\" : "src/" }
+  }
+}
