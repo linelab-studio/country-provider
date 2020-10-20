@@ -5,7 +5,7 @@ namespace LabStudio\GeoPolitic;
 
 
 use LabStudio\GeoPolitic\Exception\CountryProviderException;
-use Laminas\Hydrator\ClassMethods;
+use Zend\Hydrator\Reflection;
 
 class CountryProvider
 {
@@ -19,7 +19,7 @@ class CountryProvider
     protected static $getHelperNumericToLatin3 = [];
     protected $instancesLatin3 = [];
     /**
-     * @var ClassMethodsHydrator
+     * @var ClassMethods
      */
     protected $hydrator;
 
@@ -96,12 +96,12 @@ class CountryProvider
 
 
     /**
-     * @return ClassMethods
+     * @return Reflection
      */
     protected function getHydrator()
     {
         if ($this->hydrator === null) {
-            $this->hydrator = new ClassMethods();
+            $this->hydrator = new Reflection();
         }
         return $this->hydrator;
     }
